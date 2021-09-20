@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :require_logged_in, only: [:edit, :update]
+
     def new
         @user = User.new
     end
