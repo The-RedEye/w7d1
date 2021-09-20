@@ -9,7 +9,7 @@
   </head>
 
   <body>
-  <% if logged_in? %>
+  <% if !current_user.nil? %>
     <h2><%= current_user.username %> Information</h2>
       <form action="<%= session_url %>" method="POST">
         <input name="_method" value="DELETE" type="hidden">
